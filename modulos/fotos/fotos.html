@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos | Granja Ecológica UNIMINUTO</title>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <script src="../../js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="topline">Corporación Universitaria Minuto de Dios</div>
+    <header class="site-header"><a class="brand" href="../../index.html"><span
+                class="brand-name">UNI<span>MINUTO</span></span><span class="brand-caption">Corporación Universitaria
+                Minuto de Dios</span></a><button class="menu-toggle" aria-label="Abrir menú"
+            aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Navegación principal"><a href="../../index.html">Inicio</a><a
+                href="../proyectos/proyectos.html">Proyectos</a><a href="../espacios/espacios.html">Espacios</a><a
+                href="../mapa/mapa.html">Mapa</a><a href="../fotos/fotos.html" class="active">Fotos</a><a
+                href="../sobre-la-granja/sobre-la-granja.html">Sobre la granja</a></nav>
+    </header>
+    <main class="galeria">
+        <section class="galeria-encabezado">
+            <p class="galeria-etiqueta">Miradas de la naturaleza</p>
+            <h1>Fotos</h1>
+            <p class="galeria-descripcion">Los detalles del campo nos recuerdan que cada semilla,
+                cada hoja y cada paisaje tienen algo que contar.
+            </p>
+        </section>
+        <section class="filtros" aria-label="Filtrar fotografias">
+            <button class="filtro activo" type="button" data-filtro="todos">
+            Todas
+            </button>
+
+            <button class="filtro activo" type="button" data-filtro="paisaje">
+            Paisaje
+            </button>
+
+            <button class="filtro activo" type="button" data-filtro="huerta">
+            Huerta
+            </button>
+
+            <button class="filtro activo" type="button" data-filtro="vivero">
+            Vivero
+            </button>
+
+            <button class="filtro activo" type="button" data-filtro="laboratorio">
+            Laboratorio
+            </button>
+
+            <button class="filtro activo" type="button" data-filtro="zona_pecuaria">
+            Zona pecuaria
+            </button>
+        </section>
+
+        <section class="galeria-grid" aria-label="Fotografias de la granja">
+            <article class="foto-card" data-categoria="paisaje">
+                <img src="../../sources/fotos/fotos/paisaje.jpg"
+                alt="Vista del paisaje de la granja entre montañas y cultivos">
+                <div class="foto-pie">
+                    <p>Entre campos y cultivos</p>
+                    <button class="boton-ampliar" type="button" aria-label="Ampliar foto">↗</button>
+                </div>
+            </article>
+
+            <article class="foto-card" data-categoria="huerta">
+                <img src="../../sources/fotos/fotos/huerta.jpg"
+                 alt="Una huerta">
+                <div class="foto-pie">
+                    <p>Sembrar un nuevo comienzo</p>
+                    <button class="boton-ampliar" type="button" aria-label="Ampliar foto">↗</button>
+                </div>
+            </article>
+
+            <article class="foto-card" data-categoria="vivero">
+                <img
+                src="../../sources/fotos/fotos/vivero.jpg"
+                alt="Cultivos que crecen dentro del invernadero"
+                >
+                <div class="foto-pie">
+                    <p>La vida en el vivero</p>
+                    <button class="boton-ampliar" type="button" aria-label="Ampliar foto">↗</button>
+                </div>
+            </article>
+
+            <article class="foto-card" data-categoria="laboratorio">
+                <img src="../../sources/fotos/fotos/laboratorio.jpeg"
+                 alt="laboratorio">
+                <div class="foto-pie">
+                    <p>Investigando para el mundo</p>
+                    <button class="boton-ampliar" type="button" aria-label="Ampliar foto">↗</button>
+                </div>
+            </article>
+
+            <article class="foto-card" data-categoria="zona_pecuaria">
+                <img src="../../sources/fotos/fotos/pecuaria.jpg"
+                 alt="zona pecuaria">
+                <div class="foto-pie">
+                    <p>animales</p>
+                    <button class="boton-ampliar" type="button" aria-label="Ampliar foto">↗</button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="../../index.html">Granja Ecológica UNIMINUTO</a>
+        <p>Conectamos el conocimiento con la naturaleza.</p><small>Propuesta educativa no oficial.</small>
+    
+    <!-- Seccion para agrandar la foto-->
+     <div class="visor-fotos" id="visorFotos" hidden aria-hidden="true">
+        <div class="visor-panel" role="dialog" aria-modal="true" aria-labelledby="visorTitulo" >
+
+            <button class="visor-cerrar" id="cerrarvisor" type="button" aria-label="Cerrar fotografia">X</button>
+
+            <h2 id="visorTitulo"></h2>
+            <p class="visor-descripcion">Imagen capturada desde la granja</p>
+
+            <img id="visorImagen" alt="">
+            <div class="visor-controles">
+                <button id="fotoAnterior" type="button" aria-label="Foto anterior">←</button>
+                <span id="contadorFotos">1 / 3</span>
+                <button id="fotoSiguiente" type="button" aria-label="Foto siguiente">→</button>
+            </div>
+        </div>
+     </div>
+    
+    
+    
+    </footer>
+</body>
+
+</html>

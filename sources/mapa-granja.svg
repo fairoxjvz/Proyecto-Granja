@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1080" role="img" aria-labelledby="map-illustration-title map-illustration-description">
+            <title id="map-illustration-title">Mapa esquemático de la Granja Agroecológica UNIMINUTO Villavicencio</title>
+            <desc id="map-illustration-description">Plano orientativo de aproximadamente cinco hectáreas basado en la imagen de referencia. La zona pecuaria y el vivero se encuentran hacia el noroeste; compostaje y huertas hacia el centro; laboratorio y entrada en el suroccidente. Los senderos conectan las áreas con la vía de acceso al sur. No representa un levantamiento topográfico.</desc>
+            <defs>
+              <pattern id="vegetation" width="50" height="46" patternUnits="userSpaceOnUse">
+                <circle cx="13" cy="15" r="12" fill="#607b58"/>
+                <circle cx="30" cy="21" r="13" fill="#78906b"/>
+                <circle cx="43" cy="10" r="8" fill="#506f52"/>
+              </pattern>
+              <pattern id="crop-rows" width="22" height="22" patternUnits="userSpaceOnUse">
+                <path d="M5 0v22M16 0v22" stroke="#72906a" stroke-width="2"/>
+              </pattern>
+              <pattern id="pasture" width="34" height="34" patternUnits="userSpaceOnUse">
+                <path d="M9 25q3-9 6 0m6-7q3-9 6 0" fill="none" stroke="#81936f" stroke-width="1.5" opacity=".65"/>
+              </pattern>
+              <filter id="panel-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#293d2e" flood-opacity=".14"/>
+              </filter>
+              <style>
+                .zone-title { font: 700 19px "Segoe UI", Arial, sans-serif; fill: #294233; text-anchor: middle; }
+                .zone-caption { font: 13px "Segoe UI", Arial, sans-serif; fill: #536353; text-anchor: middle; }
+                .map-note { font: 13px "Segoe UI", Arial, sans-serif; fill: #586658; }
+                .zone-panel { stroke: #738570; stroke-width: 2; }
+              </style>
+            </defs>
+
+            <rect width="800" height="1080" rx="28" fill="#f5f2e8"/>
+            <text x="48" y="52" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1.2" fill="#294233">GRANJA AGROECOLÓGICA</text>
+            <text class="map-note" x="48" y="76">UNIMINUTO Villavicencio · esquema ilustrativo · aprox. 5 ha</text>
+
+            <g transform="translate(734 56)" aria-label="Norte">
+              <text x="0" y="-8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#405345">N</text>
+              <path d="M0 0 10 27 0 21-10 27Z" fill="#405345"/>
+            </g>
+
+            <path d="M47 112Q64 91 100 95L694 102Q745 105 754 151L747 835Q742 879 699 890L101 883Q58 879 49 838Z" fill="#dce4d3" stroke="#788a72" stroke-width="3"/>
+            <path d="M60 124Q76 108 105 110L683 117Q730 119 738 158L732 826Q728 866 692 873L109 867Q71 863 62 831Z" fill="#e8eadc"/>
+
+            <path d="M75 130C115 159 115 202 89 237S81 307 119 337M715 139C679 176 685 222 718 257S722 320 690 349M76 702C111 673 145 689 174 725M697 770C666 732 683 700 729 686" fill="none" stroke="url(#vegetation)" stroke-width="42" stroke-linecap="round"/>
+            <path d="M93 140 93 823M707 143 707 822" fill="none" stroke="#9aa68e" stroke-width="1.5" stroke-dasharray="4 9" opacity=".85"/>
+
+            <g id="zona-senderos" aria-label="Senderos y caminos de conexión">
+              <path d="M143 481C217 471 270 479 330 480S443 467 505 478 618 486 703 469" fill="none" stroke="#bca77f" stroke-width="24" stroke-linecap="round"/>
+              <path d="M143 481C217 471 270 479 330 480S443 467 505 478 618 486 703 469" fill="none" stroke="#f0e8d6" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 13"/>
+              <path d="M318 480C319 526 335 557 365 584M365 584C402 614 449 628 507 626M365 584C326 620 304 664 298 716M298 716C252 752 216 780 179 817M505 478C545 438 571 399 583 356M505 478C549 532 580 570 618 605" fill="none" stroke="#c6b38e" stroke-width="15" stroke-linecap="round"/>
+              <path d="M318 480C319 526 335 557 365 584M365 584C402 614 449 628 507 626M365 584C326 620 304 664 298 716M298 716C252 752 216 780 179 817M505 478C545 438 571 399 583 356M505 478C549 532 580 570 618 605" fill="none" stroke="#f4eddd" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 11"/>
+            </g>
+
+            <g aria-hidden="true" opacity=".82">
+              <circle cx="140" cy="183" r="16" fill="#547452"/>
+              <circle cx="170" cy="208" r="12" fill="#77916b"/>
+              <circle cx="636" cy="190" r="17" fill="#557452"/>
+              <circle cx="666" cy="215" r="12" fill="#7b936f"/>
+              <circle cx="130" cy="602" r="16" fill="#547452"/>
+              <circle cx="151" cy="631" r="12" fill="#7b936f"/>
+              <circle cx="662" cy="720" r="16" fill="#547452"/>
+              <circle cx="635" cy="744" r="12" fill="#7b936f"/>
+              <circle cx="497" cy="818" r="15" fill="#547452"/>
+              <circle cx="524" cy="839" r="12" fill="#7b936f"/>
+            </g>
+
+            <g id="zona-pecuaria" filter="url(#panel-shadow)">
+              <path class="zone-panel" d="M171 220Q171 207 185 207H300Q314 207 314 221V294Q314 308 300 308H185Q171 308 171 294Z" fill="#e8dcc4"/>
+              <rect x="186" y="221" width="113" height="55" rx="4" fill="url(#pasture)" stroke="#b19b76" stroke-width="1.5"/>
+              <path d="M186 239h113M186 258h113M214 221v55M242 221v55M270 221v55" fill="none" stroke="#b19b76" stroke-width="1.2"/>
+              <rect x="184" y="278" width="117" height="24" rx="4" fill="#f7f3e9"/>
+              <text class="zone-title" x="242" y="296">Zona pecuaria</text>
+            </g>
+
+            <g id="zona-vivero" filter="url(#panel-shadow)">
+              <path class="zone-panel" d="M92 348Q92 335 106 335H231Q245 335 245 349V435Q245 449 231 449H106Q92 449 92 435Z" fill="#dce7d4"/>
+              <path d="M111 414V377Q111 362 126 362H159Q174 362 174 377V414M184 414V377Q184 362 199 362H215Q226 362 226 373V414" fill="none" stroke="#80977a" stroke-width="3"/>
+              <path d="M108 415h120" fill="none" stroke="#80977a" stroke-width="3"/>
+              <rect x="126" y="416" width="86" height="25" rx="4" fill="#f7f3e9"/>
+              <text class="zone-title" x="169" y="434">Vivero</text>
+            </g>
+
+            <g id="zona-compostaje" filter="url(#panel-shadow)">
+              <path class="zone-panel" d="M355 521Q355 508 369 508H486Q500 508 500 522V601Q500 615 486 615H369Q355 615 355 601Z" fill="#e6d5bc"/>
+              <rect x="373" y="528" width="31" height="34" rx="3" fill="#b8996f" stroke="#967a56"/>
+              <rect x="412" y="528" width="31" height="34" rx="3" fill="#c4a77c" stroke="#967a56"/>
+              <rect x="451" y="528" width="31" height="34" rx="3" fill="#ad8c61" stroke="#967a56"/>
+              <path d="M373 538h31M412 538h31M451 538h31" stroke="#f1e6d4" stroke-width="2"/>
+              <rect x="367" y="569" width="121" height="30" rx="4" fill="#f7f3e9"/>
+              <text class="zone-title" x="428" y="590">Compostaje</text>
+            </g>
+
+            <g id="zona-huertas" filter="url(#panel-shadow)">
+              <path class="zone-panel" d="M282 638Q282 624 297 624H479Q494 624 494 639V744Q494 759 479 759H297Q282 759 282 744Z" fill="#dde7d2"/>
+              <rect x="299" y="641" width="178" height="99" rx="4" fill="url(#crop-rows)" stroke="#94a187"/>
+              <path d="M299 674h178M299 707h178" stroke="#f5f2e8" stroke-width="5"/>
+              <rect x="321" y="724" width="134" height="27" rx="4" fill="#f7f3e9"/>
+              <text class="zone-title" x="388" y="743">Huertas</text>
+            </g>
+
+            <g id="zona-laboratorio" filter="url(#panel-shadow)">
+              <path class="zone-panel" d="M74 737Q74 725 87 725H210Q223 725 223 738V811Q223 824 210 824H87Q74 824 74 811Z" fill="#ece9dd"/>
+              <rect x="91" y="743" width="49" height="34" rx="3" fill="#d3d9cc" stroke="#899581" stroke-width="1.5"/>
+              <path d="M115 743v34M91 760h49" stroke="#899581" stroke-width="1.2"/>
+              <rect x="149" y="743" width="55" height="34" rx="3" fill="#d9d8cb" stroke="#899581" stroke-width="1.5"/>
+              <rect x="94" y="782" width="109" height="27" rx="4" fill="#f7f3e9"/>
+              <text class="zone-title" x="148" y="801">Laboratorio</text>
+            </g>
+
+            <g id="zona-entrada" filter="url(#panel-shadow)">
+              <path d="M105 848 175 815" fill="none" stroke="#bca77f" stroke-width="16" stroke-linecap="round"/>
+              <path d="M105 848 175 815" fill="none" stroke="#f3ead7" stroke-width="2" stroke-dasharray="3 10"/>
+              <path d="M77 846h42M77 864h42" stroke="#6e8069" stroke-width="3"/>
+              <circle cx="105" cy="848" r="9" fill="#355c43" stroke="#fff" stroke-width="3"/>
+              <rect x="72" y="870" width="164" height="30" rx="4" fill="#f7f3e9" stroke="#b8aa8e"/>
+              <text class="zone-title" x="154" y="891">Entrada principal</text>
+            </g>
+
+            <path d="M0 936H800" stroke="#777d77" stroke-width="46"/>
+            <path d="M0 936H800" stroke="#e8e4d8" stroke-width="2" stroke-dasharray="15 13"/>
+            <path d="M105 900v36" stroke="#bca77f" stroke-width="16"/>
+            <path d="M105 900v36" stroke="#f3ead7" stroke-width="2" stroke-dasharray="3 10"/>
+            <text x="400" y="978" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" fill="#4e594f">VÍA DE ACCESO</text>
+
+            <g transform="translate(48 1010)">
+              <rect width="704" height="38" rx="7" fill="#ebe5d7"/>
+              <text x="352" y="24" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#5d675b">Distribución orientativa basada en la imagen de referencia; no es un levantamiento topográfico.</text>
+            </g>
+          </svg>
+
