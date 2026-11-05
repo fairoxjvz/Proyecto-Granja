@@ -1,0 +1,15 @@
+# Archivos locales y del sistema
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración personal del editor
+.vscode/
+
+# Dependencias y resultados de compilación (no se usan actualmente)
+node_modules/
+dist/
+coverage/
