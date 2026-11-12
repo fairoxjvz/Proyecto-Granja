@@ -89,48 +89,80 @@ botonesFiltro.forEach(function (boton) {
   });
 });
 
-/*Logica para abrir las fotos*/
-const visorFotos = document.querySelector("#visorFotos");
+// Busca las tarjetas y prepara la información de cada foto
+const fotos = Array.from(document.querySelectorAll(".foto-card"))
+    .map((tarjeta) => ({
+        tarjeta: tarjeta,
+        imagen: tarjeta.querySelector("img"),
+        titulo: tarjeta.querySelector(".foto-pie p")?.textContent.trim()
+    }))
+    .filter((foto) => foto.imagen);
 
-if (visorFotos) {
-  const imagenAmpliada = document.querySelector("#visorImagen");
-  const tituloAmpliado = document.querySelector("#visorTitulo");
-  const botonCerrar = document.querySelector("#cerrarvisor");
-  const botonesAmpliar = document.querySelectorAll(".boton-ampliar");
+// Busca los elementos del visor en el HTML
+const visor = document.getElementById("visorFotos");
+const imagenAmpliada = document.getElementById("visorImagen");
+const tituloAmpliado = document.getElementById("visorTitulo");
+const contador = document.getElementById("contadorFotos");
+const botonCerrar = document.getElementById("cerrarvisor");
+const botonAnterior = document.getElementById("fotoAnterior");
+const botonSiguiente = document.getElementById("fotoSiguiente");
 
-  function cerrarVisor() {
-    visorFotos.hidden = true;
-    visorFotos.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
+let indiceActual = 0;
 
-  botonesAmpliar.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-      const tarjeta = boton.closest(".foto-card");
-      const foto = tarjeta.querySelector("img");
-      const titulo = tarjeta.querySelector(".foto-pie p");
+// Muestra una foto y actualiza el contador
+function mostrarFoto(indice) {
+    indiceActual = (indice + fotos.length) % fotos.length;
 
-      imagenAmpliada.src = foto.src;
-      imagenAmpliada.alt = foto.alt;
-      tituloAmpliado.textContent = titulo.textContent;
+    const foto = fotos[indiceActual];
 
-      visorFotos.hidden = false;
-      visorFotos.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    });
-  });
-
-  botonCerrar.addEventListener("click", cerrarVisor);
-
-  visorFotos.addEventListener("click", function (evento) {
-    if (evento.target === visorFotos) {
-      cerrarVisor();
-    }
-  });
-
-  document.addEventListener("keydown", function (evento) {
-    if (evento.key === "Escape" && !visorFotos.hidden) {
-      cerrarVisor();
-    }
-  });
+    imagenAmpliada.src = foto.imagen.src;
+    imagenAmpliada.alt = foto.imagen.alt;
+    tituloAmpliado.textContent = foto.titulo || foto.imagen.alt;
+    contador.textContent = `${indiceActual + 1} / ${fotos.length}`;
 }
+
+// Abre el visor con la foto seleccionada
+fotos.forEach((foto, indice) => {
+    const botonAmpliar = foto.tarjeta.querySelector(".boton-ampliar");
+
+    botonAmpliar.addEventListener("click", () => {
+        mostrarFoto(indice);
+        visor.hidden = false;
+        visor.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    });
+});
+
+// Cierra el visor
+function cerrarVisor() {
+    visor.hidden = true;
+    visor.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+botonCerrar.addEventListener("click", cerrarVisor);
+
+// Cambia a la foto anterior o siguiente
+botonAnterior.addEventListener("click", () => {
+    mostrarFoto(indiceActual - 1);
+});
+
+botonSiguiente.addEventListener("click", () => {
+    mostrarFoto(indiceActual + 1);
+});
+
+// Cierra al pulsar fuera del panel
+visor.addEventListener("click", (evento) => {
+    if (evento.target === visor) {
+        cerrarVisor();
+    }
+});
+
+// También permite usar Escape y las flechas del teclado
+document.addEventListener("keydown", (evento) => {
+    if (visor.hidden) return;
+
+    if (evento.key === "Escape") cerrarVisor();
+    if (evento.key === "ArrowLeft") mostrarFoto(indiceActual - 1);
+    if (evento.key === "ArrowRight") mostrarFoto(indiceActual + 1);
+});
