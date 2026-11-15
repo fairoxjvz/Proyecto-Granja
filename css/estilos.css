@@ -476,6 +476,10 @@ body {
     padding: 24px
 }
 
+.area-dialog-gallery {
+    width: 100%
+}
+
 .area-dialog-close {
     position: absolute;
     top: 32px;
@@ -501,11 +505,45 @@ body {
 .area-dialog-image {
     display: block;
     width: 100%;
-    max-height: 300px;
-    aspect-ratio: 16 / 9;
+    height: min(52vh, 420px);
+    min-height: 180px;
     border-radius: 8px;
     background: #e7ecdf;
-    object-fit: cover
+    object-fit: contain
+}
+
+.area-gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 12px
+}
+
+.area-gallery-button {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid #c8d1bc;
+    border-radius: 50%;
+    color: var(--deep);
+    background: #fff;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.area-gallery-button:hover,
+.area-gallery-button:focus-visible {
+    color: #fff;
+    background: var(--green)
+}
+
+.area-photo-count {
+    min-width: 48px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center
 }
 
 .area-dialog-title {
@@ -670,7 +708,8 @@ body {
     }
 
     .area-dialog-image {
-        max-height: 220px
+        height: min(42vh, 300px);
+        min-height: 150px
     }
 }
 
