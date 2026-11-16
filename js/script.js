@@ -51,7 +51,8 @@ if (tipButton && tipOutput) {
     'Riega tus plantas temprano o al final de la tarde para reducir la evaporación.',
     'Observa los insectos de tu jardín: muchos ayudan a polinizar las plantas.',
     'Reutiliza un recipiente limpio como matera y dale una segunda vida.',
-    'Comparte con alguien un dato nuevo que hayas aprendido sobre la naturaleza.'
+    'Comparte con alguien un dato nuevo que hayas aprendido sobre la naturaleza.',
+    'Papi cachame.'
   ];
   let currentTip = 0;
 
