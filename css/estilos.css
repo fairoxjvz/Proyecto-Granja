@@ -1807,3 +1807,106 @@ button:focus-visible {
   font-size: 20px;
   cursor: pointer;
 }
+
+/* ===== Módulo Proyectos ===== */
+.proy-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.proy-stat {
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid #e1e6dd;
+  border-left: 4px solid var(--gold);
+  border-radius: 5px;
+}
+
+.proy-stat strong {
+  display: block;
+  color: var(--green);
+  font: 500 32px var(--serif);
+}
+
+.proy-stat span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.proy-subtitulo {
+  margin: 42px 0 10px;
+  color: var(--deep);
+  font: 500 24px var(--serif);
+}
+
+.proy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.proy-tag {
+  padding: 6px 14px;
+  background: #f0f3eb;
+  border-radius: 20px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.proy-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.proy-card {
+  padding: 22px 24px;
+  background: var(--white);
+  border: 1px solid #e1e6dd;
+  border-top: 4px solid var(--gold);
+  border-radius: 5px;
+}
+
+.proy-card h4 {
+  margin: 0 0 10px;
+  color: var(--green);
+  font: 500 20px var(--serif);
+}
+
+.proy-card ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.proy-faq {
+  margin-top: 14px;
+}
+
+.proy-faq details {
+  margin-bottom: 10px;
+  padding: 14px 20px;
+  background: var(--white);
+  border: 1px solid #e1e6dd;
+  border-radius: 5px;
+}
+
+.proy-faq summary {
+  color: var(--green);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.proy-faq details[open] summary {
+  margin-bottom: 8px;
+}
+
+.proy-faq p {
+  margin: 0;
+  color: #46564a;
+}
